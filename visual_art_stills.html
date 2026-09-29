@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaPaBear_Portfolio — Visual Art (Stills)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+    <div id="app">
+        <!-- HEADER -->
+        <div id="header">
+            <a id="title-link" href="Home.html">
+                <div id="title"><span>PaPaBear</span></div>
+            </a>
+            <a id="middle-logo" href="Home.html">
+                <img src="HW_initials_B_boundless.png" alt="HW">
+            </a>
+            <button id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-panel">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- PAGE HEAD -->
+        <div class="page-head">
+            <h1>Visual Art <span style="opacity:.55">— Stills</span></h1>
+            <p>Still images — description, date, keywords, and tools for each piece.</p>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div id="vs-grid" class="project-grid"><!-- populated by renderProjectCards() --></div>
+
+        <!-- MAIN -->
+        <div id="main"></div>
+    </div><!-- /app -->
+
+    <!-- NAV PANEL -->
+    <div id="nav-scrim"></div>
+    <nav id="nav-panel" aria-hidden="true">
+        <a href="Home.html">Home</a>
+        <a href="Bio.html">Bio</a>
+        <a href="interactive_art.html">Interactive Art</a>
+        <a href="visual_art_timebased.html">Visual Art (Time-based)</a>
+        <a href="visual_art_stills.html" class="current">Visual Art (Stills)</a>
+        <a href="creative_coding.html">Creative Coding</a>
+        <a href="phobos.html">Phobos</a>
+    </nav>
+
+    <!-- CONTACT MODAL -->
+    <div id="contact-scrim">
+        <div id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-heading">
+            <button id="contact-close" aria-label="Close contact form">&times;</button>
+            <h2 id="contact-heading">Contact</h2>
+            <form id="contact-form">
+                <div class="field">
+                    <label for="c-name">Name</label>
+                    <input type="text" id="c-name" name="name" required>
+                </div>
+                <div class="field">
+                    <label for="c-email">Email</label>
+                    <input type="email" id="c-email" name="email" required>
+                </div>
+                <div class="field">
+                    <label for="c-message">Message</label>
+                    <textarea id="c-message" name="message" required></textarea>
+                </div>
+                <button type="submit" id="contact-submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="footer-text footer-links">
+            <button id="contact-open" type="button">Contact</button>
+            <span class="footer-sep">&middot;</span>
+            <a href="mailto:hassan.wakaf.x@google.com">Email</a>
+            <span class="footer-sep">&middot;</span>
+            <a href="https://instagram.com/hassan_wakaf/" target="_blank" rel="noopener">IG</a>
+            <span class="footer-sep">&middot;</span>
+            <a href="https://linkedin.com/in/hassan-wakaf/" target="_blank" rel="noopener">Li</a>
+        </div>
+        <div class="footer-text">
+            <a id="footer-name-link" href="Bio.html">Hassan Wakaf</a>
+        </div>
+    </div>
+
+    <script src="assets/projects-data.js"></script>
+    <script src="assets/site.js"></script>
+    <script>
+        renderProjectCards('vs-grid', PORTFOLIO_DATA.visualArtStills);
+    </script>
+</body>
+</html>
